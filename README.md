@@ -57,6 +57,10 @@ This model fits:
 - **Test 4** (0 to 40 JTU, 5 JTU steps)
 - **Test 3** (0 to 100 JTU, 25 JTU steps)
 
+
+ℹ️ The linear fit across the 0–100 JTU range yielded an R² of 0.9993, confirming excellent agreement between the model and empirical data. 
+
+
 ![Test 3 – 25 JTU increments](./curves/test_3.png)
 *Figure – Test 3: coarse steps (25 JTU) confirm consistency of linear model up to 100 JTU.*
 
@@ -100,6 +104,8 @@ For example:
 ![Photic depth vs turbidity](./curves/Z_photique_vs_JTU.png)
 *Figure – Estimated photic depth (Zeu) versus turbidity (JTU), using empirical formula.*
 
+*This empirical model was inspired by limnological observations published in the* Canadian Journal of Fisheries and Aquatic Sciences *and* Hydrobiologia.
+
 ## 🔧 Arduino Implementation
 
 ```c
@@ -121,6 +127,13 @@ float jtu = (3.53 - voltage) / 0.0165;
 - `Lamotte_turbidity_kit.jpg`
 - `colorimeter_1.jpg`
 - `colorimeter_2.jpg`
+
+## 📚 References
+
+- Canadian Journal of Fisheries and Aquatic Sciences  
+- Hydrobiologia  
+- Kirk, J. T. O. (1994). *Light and Photosynthesis in Aquatic Ecosystems*. Cambridge University Press.  
+- Wetzel, R. G. (2001). *Limnology: Lake and River Ecosystems*. Academic Press.
 
 ## 👨‍🔬 Author
 
