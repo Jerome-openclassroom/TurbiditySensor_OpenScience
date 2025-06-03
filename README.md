@@ -122,3 +122,6 @@ float jtu = (3.53 - voltage) / 0.0165;
 ## 👨‍🔬 Author
 
 This project was conducted by **Jérôme**, as part of an open-science initiative to develop practical and educational environmental sensing tools.
+
+🔗 **See also my related work on GitHub**:
+- [Main GitHub profile](https://github.com/Jerome-openclassroom)
