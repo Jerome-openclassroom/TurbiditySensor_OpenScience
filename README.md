@@ -73,7 +73,7 @@ This model fits:
 - **Sensor response**: stable and reproducible
 
 
-💡 If turbidity exceeds 125 JTU, simply dilute the sample (1:1 with distilled water), measure the mixed solution, and multiply the result by 2 to recover the original value. This extends the range up to ~250 JTU without modifying the sensor or code.
+💡 If turbidity exceeds 125 JTU, simply dilute the sample (1:1 with distilled, or demineralized water), measure the mixed solution, and multiply the result by 2 to recover the original value. This extends the range up to ~250 JTU without modifying the sensor or code.
 
 ## 🌞 Optional Use: Photic Zone Estimation
 
