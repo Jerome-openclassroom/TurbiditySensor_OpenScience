@@ -65,12 +65,15 @@ This model fits:
 | JTU Range      | Usage                    | Comment |
 |----------------|--------------------------|---------|
 | 0 – 100 JTU    | ✅ **Standard range**     | High precision, resolution ~0.25 JTU |
-| 100 – 150 JTU  | ⚠️ **Extended use**       | Slight linearity loss |
-| >150 JTU       | ❌ **Not recommended**    | Optical floor, reduced sensitivity |
+| 100 – 125 JTU  | ⚠️ **Extended use**       | Slight linearity loss |
+| >125 JTU       | ❌ **Not recommended**    | Optical floor, reduced sensitivity |
 
 - **Arduino ADC compatibility**: 10-bit resolution sufficient
 - **Practical resolution**: ~0.03–0.04 V per 5 JTU
 - **Sensor response**: stable and reproducible
+
+
+💡 If turbidity exceeds 125 JTU, simply dilute the sample (1:1 with distilled water), measure the mixed solution, and multiply the result by 2 to recover the original value. This extends the range up to ~250 JTU without modifying the sensor or code.
 
 ## 🌞 Optional Use: Photic Zone Estimation
 
