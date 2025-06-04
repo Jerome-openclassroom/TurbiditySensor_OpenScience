@@ -122,9 +122,26 @@ This approach is designed for fieldwork, low-tech education, citizen science, an
 
 ## 🌿 Model Extension: Estimating Aquatic Primary Productivity
 
-This script introduces a simplified model for estimating gross (GPP) and net primary productivity (NPP) in aquatic ecosystems, based solely on an optical voltage measurement (from a turbidity/colorimeter sensor) and an estimation of surface irradiance.
+📌 Note on Model Origin and Methodology
+This model was developed ex nihilo by the author, assisted by an advanced AI, and is not based on any known pre-existing model in the scientific literature. It emerged through a sequence of original reasoning steps designed to link a simple optical voltage measurement (from a turbidity or colorimeter sensor) to estimates of aquatic primary productivity.
 
-The model integrates light attenuation in the water column up to the photic depth (*Zeu*), applies an average photosynthetic efficiency for phytoplankton (typically 2%), and converts the resulting energy into biomass using the enthalpy of cellulose synthesis (≈ 17,284 J/g). Net productivity is obtained by subtracting autotrophic respiration (*R_auto*, typically 30%).
+The approach relies on the following conceptual chain:
+
+Estimation of surface irradiance (I₀) over a 24h period
+
+Calculation of the attenuation coefficient (k) from the optical reading
+
+Deduction of the photic depth (Zeu) as Zeu = 3 / k
+
+Integration of the light penetration function over the 0–Zeu column
+
+Application of a photosynthetic conversion efficiency (e.g., 2%)
+
+Translation of energy into biomass via the enthalpy of cellulose synthesis, assuming that the photosynthetically produced biomass is entirely (or predominantly) cellulosic
+
+This approach allows the user to estimate both gross primary productivity (GPP) and net primary productivity (NPP) in units of g/m², without requiring chemical analysis or advanced instrumentation.
+
+The model represents the outcome of an intense, cognitively demanding development process, structured through a close collaboration between human intuition and AI assistance. The result is a minimalistic but functionally sound approximation method that we believe may offer real utility in educational, exploratory, or low-tech ecological contexts.
 
 This aquatic model is directly inspired by the terrestrial biomass model developed in:
 
