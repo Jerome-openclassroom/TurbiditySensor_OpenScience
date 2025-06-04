@@ -107,8 +107,8 @@ For example:
 *This empirical model was inspired by limnological observations published in the* Canadian Journal of Fisheries and Aquatic Sciences *and* Hydrobiologia.
 
 
-🧪 Use Cases
-This Python script provides a low-cost, open-source method for estimating water turbidity (in JTU) and photic zone depth (Zeu, in meters) from a simple voltage measurement.
+###🧪 Use Cases
+The Python scripts provide a low-cost, open-source method for estimating water turbidity (in JTU) and photic zone depth (Zeu, in meters) from a simple voltage measurement.
 It can be used in several environments:
 
 ✅ Full version on PC or JupyterLab: includes calculation and light attenuation graph.
@@ -129,7 +129,7 @@ This approach is designed for fieldwork, low-tech education, citizen science, an
 - `test_3.png` – voltage vs JTU (Test 3)
 - `test_4.png` – voltage vs JTU (Test 4)
 - `Z_photique_vs_JTU.png` – photic depth vs turbidity
-- `python script result (JupyterLab)'
+- `python script result` (JupyterLab)
 
 ### `/code`
 - `Calc_turbidity.txt`
