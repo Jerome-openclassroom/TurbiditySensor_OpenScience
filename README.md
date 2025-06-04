@@ -208,19 +208,30 @@ R_auto is the proportion of biomass consumed by the producer’s own respiration
 
 ### 🔍 Example Calculation and Empirical Consistency
 
-As an example, consider a measurement from the turbidity sensor corresponding to a photic attenuation coefficient of `k = 0.6 m⁻¹`. This gives a photic depth `Zeu = 3 / k ≈ 5 m`. Assuming a relative algal density `D_algae = 1.0`, a daily surface irradiance `I₀ = 200 W/m²`, and a photosynthetic efficiency `R_photo = 0.02`, the energy-based Gross Primary Productivity (GPP) is calculated as:
+### 🧪 Example Calculation: Temperate Lake at Spring Equinox
 
-**GPP_energy = 1.0 × 200 × [(1 − exp(−0.6 × 5)) / 0.6] × 0.02 ≈ 129,332 J/m²**
+To provide a realistic example, we simulated a clear day at the spring equinox in a temperate zone (latitude ~45°N), where daylight lasts 12 hours. The irradiance profile was modeled using a sinusoidal function peaking at 600 W/m² at noon and zero at sunrise/sunset.
 
-Using the enthalpy of cellulose synthesis (ΔH_cellulose ≈ 17,284 J/g), the equivalent dry biomass produced is:
+We assumed the following parameters:
+- Mean daylight duration: **12 hours**
+- Light attenuation coefficient `k`: **0.6 m⁻¹** (moderately turbid water)
+- Surface irradiance peak: **600 W/m²**
+- Algal density factor: **1.0** (normalized)
+- Photosynthetic efficiency: **1.7%** (realistic field condition)
+- Autotrophic respiration: **30%**
 
-**GPP_mass ≈ 129,332 / 17,284 ≈ 7.48 g/m²**
+This setup results in a photic depth (Zeu) of 5 meters.
 
-Applying a standard autotrophic respiration factor (R_auto = 0.3), the Net Primary Productivity (NPP) becomes:
+The simulated total irradiance over the day is numerically integrated (in W·s/m² = J/m²), modulated by light absorption through the water column, and converted into organic matter based on the enthalpy of cellulose synthesis (17,284 J/g).
 
-**NPP_mass ≈ 7.48 × (1 − 0.3) ≈ 5.24 g/m²**
+**Final Result**:
+- **Gross Primary Productivity (GPP):** ~25.77 g/m²/day
+- **Net Primary Productivity (NPP):** ~18.04 g/m²/day
 
-This value is consistent with commonly observed productivity levels in mesotrophic to moderately eutrophic lakes. Typical values for NPP in freshwater ecosystems range from 1 to 15 g/m²/day depending on nutrient availability, light penetration, and phytoplankton density. The result demonstrates the functional validity of this simplified model when used within realistic ecological ranges.
+This value is **consistent with typical observations** in eutrophic lakes or small productive ponds under good sunlight conditions.
+
+This realistic scenario illustrates how optical turbidity data and basic irradiance modeling can yield biologically meaningful estimates of aquatic productivity, even without complex instruments or costly EXAO systems.
+
 
 ********************
 
