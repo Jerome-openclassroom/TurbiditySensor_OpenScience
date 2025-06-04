@@ -39,7 +39,7 @@ The sensor's optical response is based on the **Beer–Lambert law**, which rela
 
 ### 4. ⚖️ Model Selection
 - Data showed **excellent linearity** up to 100 JTU.
-- The **linear model** was preferred for both accuracy and **ease of implementation in C/Arduino**.
+- The **linear model** was preferred for both accuracy and **ease of implementation**.
 
 ![Test 4 – 5 JTU increments](./curves/test_4.png)
 *Figure – Test 4: fine resolution with 5 JTU steps, used to validate linearity in the sensitive range.*
