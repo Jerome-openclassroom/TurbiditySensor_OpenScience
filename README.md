@@ -143,10 +143,6 @@ The gross primary productivity (GPP) in terms of energy is calculated as:
 
 GPP_energy = D_algae × I₀ × [(1 − exp(−k × Zeu)) / k] × R_photo
 
-\[
-\text{GPP}_{\text{energy}} = D_{\text{algae}} \cdot I_0 \cdot \left( \frac{1 - e^{-k \cdot Z_{\text{eu}}}}{k} \right) \cdot R_{\text{photo}}
-\]
-
 Where:
 
 D_algae is the relative algal density (dimensionless or normalized mg/m³),
