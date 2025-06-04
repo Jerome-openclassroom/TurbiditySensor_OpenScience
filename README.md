@@ -136,37 +136,44 @@ This open and low-cost approach aims to make ecological diagnostics and biogeoch
 
 ---
 
-### 📐 Equations
+### 📐 Equations and Model Description
 
-**1. Gross Primary Productivity (GPP, in J/m²):**
+1. Gross Primary Productivity – Energetic (in J/m²)
+The gross primary productivity (GPP) in terms of energy is calculated as:
 
-$$
-\text{GPP}_{energy} = D_{algae} \cdot I_0 \cdot \left( \frac{1 - e^{-k \cdot Zeu}}{k} \right) \cdot R_{photo}
-$$
-
-**2. Gross Primary Biomass (in g/m²):**
-
-$$
-\text{GPP}_{mass} = \frac{\text{GPP}_{energy}}{\Delta H_{cellulose}}
-$$
-
-**3. Net Primary Biomass (in g/m²):**
-
-$$
-\text{NPP}_{mass} = \text{GPP}_{mass} \cdot (1 - R_{auto})
-$$
+GPP_energy = D_algae × I₀ × [(1 − exp(−k × Zeu)) / k] × R_photo
 
 Where:
-- \( D_{algae} \): relative algal density (dimensionless or normalized mg/m³)
-- \( I_0 \): surface irradiance (W/m²)
-- \( k \): light attenuation coefficient (m⁻¹)
-- \( Zeu = \frac{3}{k} \): photic zone depth (m)
-- \( R_{photo} \): photosynthetic efficiency (e.g., 0.02)
-- \( \Delta H_{cellulose} \): cellulose synthesis enthalpy (≈ 17,284 J/g)
-- \( R_{auto} \): autotrophic respiration ratio (e.g., 0.3)
 
-This formulation links basic field measurements to biophysical and ecological quantities in a transparent and modular fashion.
+D_algae is the relative algal density (dimensionless or normalized mg/m³),
 
+I₀ is the surface irradiance (in W/m²),
+
+k is the light attenuation coefficient (in m⁻¹),
+
+Zeu is the photic depth, defined as Zeu = 3 / k,
+
+R_photo is the photosynthetic conversion efficiency (e.g., 0.02 for phytoplankton).
+
+The term (1 − exp(−k × Zeu)) / k corresponds to the integrated light availability across the water column from the surface to depth Zeu.
+
+2. Gross Primary Productivity – Mass-based (in g/m²)
+The energetic GPP is converted into estimated biomass using the enthalpy of cellulose synthesis:
+
+GPP_mass = GPP_energy / ΔH_cellulose
+
+Where:
+
+ΔH_cellulose is the energy required to synthesize one gram of cellulose (typically around 17,284 J/g).
+
+3. Net Primary Productivity – Mass-based (in g/m²)
+To account for autotrophic respiration, we compute the net primary productivity (NPP) as:
+
+NPP_mass = GPP_mass × (1 − R_auto)
+
+Where:
+
+R_auto is the proportion of biomass consumed by the producer’s own respiration (typically 0.3 for phytoplankton).
 
 **********************
 ## 📁 Included Files
