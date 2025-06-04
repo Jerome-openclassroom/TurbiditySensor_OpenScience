@@ -1,0 +1,18 @@
+import math
+
+# Parameters
+i0 = 400        # Surface irradiance in W/m² (daily)
+r_photo = 0.02  # Photosynthetic efficiency (2%)
+r_auto = 0.3    # Autotrophic respiration ratio (30%)
+d_algae = 1.0   # Relative algal density
+k = 0.6         # Light attenuation coefficient (m⁻¹)
+
+# Derived values
+zeu = 3 / k                                 # Photic depth (m)
+light_integral = (1 - math.exp(-k * zeu)) / k
+gpp_energy = d_algae * i0 * light_integral * r_photo * 3600  # J/m²
+gpp_mass = gpp_energy / 17284              # Convert to grams of cellulose
+npp_mass = gpp_mass * (1 - r_auto)
+
+# Output
+print("Net Primary Productivity (NPP):", round(npp_mass, 2), "g/m²")
