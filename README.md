@@ -72,7 +72,6 @@ This model fits:
 | 100 – 125 JTU  | ⚠️ **Extended use**       | Slight linearity loss |
 | >125 JTU       | ❌ **Not recommended**    | Optical floor, reduced sensitivity |
 
-- **Arduino ADC compatibility**: 10-bit resolution sufficient
 - **Practical resolution**: ~0.03–0.04 V per 5 JTU
 - **Sensor response**: stable and reproducible
 
