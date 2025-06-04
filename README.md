@@ -176,8 +176,8 @@ Where:
 3. Net Primary Productivity – Mass-based (in g/m²)
 To account for autotrophic respiration, we compute the net primary productivity (NPP) as:
 
-### ➤ Equation 2 – GPP (mass-based)
-![GPP mass](pictures/equation_2.png)
+### ➤ Equation 3 – NPP (mass-based)
+![NPP mass](pictures/equation_3.png)
 
 
 NPP_mass = GPP_mass × (1 − R_auto)
