@@ -118,7 +118,57 @@ It can be used in several environments:
 
 This approach is designed for fieldwork, low-tech education, citizen science, and any context where simplicity, transparency, and reproducibility are key.
 
+**********************
 
+## 🌿 Model Extension: Estimating Aquatic Primary Productivity
+
+This script introduces a simplified model for estimating gross (GPP) and net primary productivity (NPP) in aquatic ecosystems, based solely on an optical voltage measurement (from a turbidity/colorimeter sensor) and an estimation of surface irradiance.
+
+The model integrates light attenuation in the water column up to the photic depth (*Zeu*), applies an average photosynthetic efficiency for phytoplankton (typically 2%), and converts the resulting energy into biomass using the enthalpy of cellulose synthesis (≈ 17,284 J/g). Net productivity is obtained by subtracting autotrophic respiration (*R_auto*, typically 30%).
+
+This aquatic model is directly inspired by the terrestrial biomass model developed in:
+
+🔗 [Lyra_LowCost_Soil_Leaf](https://github.com/Jerome-openclassroom/Lyra_LowCost_Soil_Leaf)
+
+where plant productivity is estimated using foliage density, incident light, and species-specific photosynthetic yield.
+
+This open and low-cost approach aims to make ecological diagnostics and biogeochemical modeling accessible using simple sensors, standalone Python scripts, and reproducible protocols compatible with citizen science initiatives.
+
+---
+
+### 📐 Equations
+
+**1. Gross Primary Productivity (GPP, in J/m²):**
+
+$$
+\text{GPP}_{energy} = D_{algae} \cdot I_0 \cdot \left( \frac{1 - e^{-k \cdot Zeu}}{k} \right) \cdot R_{photo}
+$$
+
+**2. Gross Primary Biomass (in g/m²):**
+
+$$
+\text{GPP}_{mass} = \frac{\text{GPP}_{energy}}{\Delta H_{cellulose}}
+$$
+
+**3. Net Primary Biomass (in g/m²):**
+
+$$
+\text{NPP}_{mass} = \text{GPP}_{mass} \cdot (1 - R_{auto})
+$$
+
+Where:
+- \( D_{algae} \): relative algal density (dimensionless or normalized mg/m³)
+- \( I_0 \): surface irradiance (W/m²)
+- \( k \): light attenuation coefficient (m⁻¹)
+- \( Zeu = \frac{3}{k} \): photic zone depth (m)
+- \( R_{photo} \): photosynthetic efficiency (e.g., 0.02)
+- \( \Delta H_{cellulose} \): cellulose synthesis enthalpy (≈ 17,284 J/g)
+- \( R_{auto} \): autotrophic respiration ratio (e.g., 0.3)
+
+This formulation links basic field measurements to biophysical and ecological quantities in a transparent and modular fashion.
+
+
+**********************
 ## 📁 Included Files
 
 ### `/calibration`
