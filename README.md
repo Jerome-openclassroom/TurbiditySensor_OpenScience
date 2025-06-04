@@ -122,7 +122,8 @@ This approach is designed for fieldwork, low-tech education, citizen science, an
 
 ## 🌿 Model Extension: Estimating Aquatic Primary Productivity
 
-#📌 Note on Model Origin and Methodology#
+📌 Note on Model Origin and Methodology
+
 This model was developed ex nihilo by the author, assisted by an advanced AI, and is not based on any known pre-existing model in the scientific literature. It emerged through a sequence of original reasoning steps designed to link a simple optical voltage measurement (from a turbidity or colorimeter sensor) to estimates of aquatic primary productivity.
 
 The approach relies on the following conceptual chain:
