@@ -107,7 +107,7 @@ For example:
 *This empirical model was inspired by limnological observations published in the* Canadian Journal of Fisheries and Aquatic Sciences *and* Hydrobiologia.
 
 
-###🧪 Use Cases
+### 🧪 Use Cases
 The Python scripts provide a low-cost, open-source method for estimating water turbidity (in JTU) and photic zone depth (Zeu, in meters) from a simple voltage measurement.
 It can be used in several environments:
 
