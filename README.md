@@ -266,6 +266,13 @@ For a daily NPP of **20 g/m²** (dry cellulose equivalent):
 This method provides a **first-order estimation** suitable for low-cost sensors and educational or participatory science purposes. Further refinements may include pigment analysis, in-situ fluorometry, or nutrient limitation modeling.
 
 
+### 🌀 Ecological Context
+
+In aquatic systems, a portion of the phytoplankton biomass is consumed by zooplankton. In marine environments, the calcareous shells (tests) of these organisms may sediment and contribute to long-term carbon sequestration. In freshwater lakes, the carbon cycle is more dynamic and often seasonal.
+
+Over time, some lakes evolve into peatlands (ombrotrophic bogs or minerotrophic fens), especially in boreal and temperate regions. These systems accumulate organic matter under anaerobic and acidic conditions, becoming major long-term carbon sinks.
+
+> This simplified model estimates **photosynthetic carbon fixation**, but the actual fate of carbon depends on food web interactions, mineralization, and sedimentation pathways.
 
 ***********************
 
