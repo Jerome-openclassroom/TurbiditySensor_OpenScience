@@ -1,0 +1,43 @@
+## Manual Input Parameters
+tension_ref = 3.55  # Reference tension (clear water) Example
+tension_measured = 1.55  # Measured tension (turbid water) Example
+
+import math
+
+if tension_ref < 3.00 or tension_ref > 3.60:
+    print("Error: The reference voltage must be between 3.00 and 3.60 V.")
+elif tension_measured <= 0 or tension_measured > tension_ref:
+    print("Error: The measured voltage must be less than or equal to the reference voltage.")
+else:
+    jtu = (3.53 - tension_measured) / 0.0165 #This calculation is valid for turbidity values between **0 and 125 JTU**. 
+    k = 0.05 + 0.02 * math.sqrt(jtu) 
+    zeu = 3 / k
+
+    print(f"Turbidity (JTU) : {round(jtu, 2)}")
+    print(f"Depth of the photic zone (Zeu) : {round(zeu, 2)} m")
+if jtu >= 125:
+    print("Warning: Accuracy decreases above 125 JTU. Consider using a dilution.")
+
+# === Display results ===
+print(f"Turbidity (JTU): {round(jtu, 2)}")
+print(f"Attenuation coefficient k: {round(k, 4)} m⁻¹")
+print(f"Photic zone depth (Zeu): {round(zeu, 2)} m")
+
+# === Light attenuation curve ===
+import numpy as np
+import matplotlib.pyplot as plt
+
+z = np.linspace(0, zeu, 100)    # Depth range from 0 to Zeu
+I0 = 1.0                        # Initial light intensity (arbitrary units)
+I = I0 * np.exp(-k * z)        # Exponential light decay with depth
+
+# === Plot ===
+plt.figure(figsize=(7, 5))
+plt.plot(z, I, label="Light intensity vs. depth", color="green")
+plt.xlabel("Depth (m)")
+plt.ylabel("Relative Light Intensity")
+plt.title("Attenuation of Light in Water Column")
+plt.grid(True)
+plt.legend()
+plt.tight_layout()
+plt.show()
