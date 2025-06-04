@@ -141,6 +141,9 @@ This open and low-cost approach aims to make ecological diagnostics and biogeoch
 1. Gross Primary Productivity – Energetic (in J/m²)
 The gross primary productivity (GPP) in terms of energy is calculated as:
 
+### ➤ Equation 1 – GPP (energy-based)
+![GPP energy](pictures/equation_1.png)
+
 GPP_energy = D_algae × I₀ × [(1 − exp(−k × Zeu)) / k] × R_photo
 
 Where:
@@ -160,6 +163,10 @@ The term (1 − exp(−k × Zeu)) / k corresponds to the integrated light availa
 2. Gross Primary Productivity – Mass-based (in g/m²)
 The energetic GPP is converted into estimated biomass using the enthalpy of cellulose synthesis:
 
+### ➤ Equation 2 – GPP (mass-based)
+![GPP mass](pictures/equation_2.png)
+
+
 GPP_mass = GPP_energy / ΔH_cellulose
 
 Where:
@@ -168,6 +175,10 @@ Where:
 
 3. Net Primary Productivity – Mass-based (in g/m²)
 To account for autotrophic respiration, we compute the net primary productivity (NPP) as:
+
+### ➤ Equation 2 – GPP (mass-based)
+![GPP mass](pictures/equation_2.png)
+
 
 NPP_mass = GPP_mass × (1 − R_auto)
 
