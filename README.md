@@ -1,5 +1,5 @@
 
-# Turbidity Sensor Calibration – Arduino + Pierron Colorimeter
+# Turbidity Sensor Calibration –Pierron Colorimeter
 
 This project documents the calibration of a modified Pierron colorimeter for measuring water turbidity in natural environments, using a low-cost analog sensor read via Arduino.
 
@@ -106,12 +106,6 @@ For example:
 
 *This empirical model was inspired by limnological observations published in the* Canadian Journal of Fisheries and Aquatic Sciences *and* Hydrobiologia.
 
-## 🔧 Arduino Implementation
-
-```c
-float voltage = analogRead(A0) * (5.0 / 1023.0);
-float jtu = (3.53 - voltage) / 0.0165;
-```
 
 ## 📁 Included Files
 
