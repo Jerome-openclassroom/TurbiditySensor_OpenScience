@@ -270,4 +270,9 @@ This realistic scenario illustrates how optical turbidity data and basic irradia
 This project was conducted by **Jérôme**, as part of an open-science initiative to develop practical and educational environmental sensing tools.
 
 🔗 **See also my related work on GitHub**:
-- [Main GitHub profile](https://github.com/Jerome-openclassroom)
+## 🔗 Part of the Lyra Ecosystem
+
+- [Lyra_Leaf_SPAD_Calibration](https://github.com/Jerome-openclassroom/Lyra_Leaf_SPAD_Calibration) – SPAD sensor calibration for estimating chlorophyll density in leaves.
+- [Lyra_LowCost_Soil_Leaf](https://github.com/Jerome-openclassroom/Lyra_LowCost_Soil_Leaf) – Integrated low-cost soil and leaf model for terrestrial primary productivity.
+- [Leaf_Chlorose_CNN_Training](https://github.com/Jerome-openclassroom/Leaf_Chlorose_CNN_Training) – CNN-based classification of chlorotic vs. healthy leaves from scanned images.
+
