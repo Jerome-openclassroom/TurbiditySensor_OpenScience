@@ -234,7 +234,40 @@ This realistic scenario illustrates how optical turbidity data and basic irradia
 
 
 ********************
+### 📌 Addendum – Carbon Fixation Estimate
 
+This project proposes a simplified model to estimate aquatic Net Primary Productivity (NPP) from optical turbidity measurements. From this value, it is possible to infer an approximate carbon sequestration potential based on the biochemical composition of plant biomass.
+
+Assuming that the photosynthetically produced biomass is mostly cellulose (C₆H₁₀O₅)ₙ, we use the following conversion:
+
+- **Molar mass of cellulose**: 162 g/mol  
+- **Carbon content per gram of cellulose**: 12/162 ≈ 0.074 g C/g cellulose  
+- **CO₂ equivalent per gram of carbon**: (44/12) = 3.67 g CO₂/g C
+
+#### Example calculation
+
+For a daily NPP of **20 g/m²** (dry cellulose equivalent):
+
+- **Carbon fixed**:  
+  20 × (12/162) ≈ **1.48 g C/m²/day**
+
+- **CO₂ sequestrated**:  
+  1.48 × (44/12) ≈ **5.42 g CO₂/m²/day**
+
+> 🔬 This estimation allows a basic carbon accounting from a low-cost turbidity sensor, reinforcing the scientific value of optical field diagnostics in ecological monitoring.
+
+### ⚠️ Limitations & Notes
+
+- The model assumes that most of the photosynthetic biomass is **cellulose-based**, which is a simplification. Natural phytoplankton may contain proteins, lipids, or other polysaccharides.
+- No distinction is made between **gross** and **net ecosystem productivity** beyond autotrophic respiration.
+- **Heterotrophic respiration**, microbial decomposition, or grazing losses are not accounted for.
+- The irradiance input is assumed to be uniform and cloudless unless otherwise specified.
+
+This method provides a **first-order estimation** suitable for low-cost sensors and educational or participatory science purposes. Further refinements may include pigment analysis, in-situ fluorometry, or nutrient limitation modeling.
+
+
+
+***********************
 
 ## 📁 Included Files
 
