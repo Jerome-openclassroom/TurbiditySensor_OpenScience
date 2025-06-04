@@ -127,17 +127,17 @@ This model was developed ex nihilo by the author, assisted by an advanced AI, an
 
 The approach relies on the following conceptual chain:
 
-Estimation of surface irradiance (I₀) over a 24h period
+- Estimation of surface irradiance (I₀) over a 24h period
 
-Calculation of the attenuation coefficient (k) from the optical reading
+- Calculation of the attenuation coefficient (k) from the optical reading
 
-Deduction of the photic depth (Zeu) as Zeu = 3 / k
+- Deduction of the photic depth (Zeu) as Zeu = 3 / k
 
-Integration of the light penetration function over the 0–Zeu column
+- Integration of the light penetration function over the 0–Zeu column
 
-Application of a photosynthetic conversion efficiency (e.g., 2%)
+- Application of a photosynthetic conversion efficiency (e.g., 2%)
 
-Translation of energy into biomass via the enthalpy of cellulose synthesis, assuming that the photosynthetically produced biomass is entirely (or predominantly) cellulosic
+- Translation of energy into biomass via the enthalpy of cellulose synthesis, assuming that the photosynthetically produced biomass is entirely (or predominantly) cellulosic
 
 This approach allows the user to estimate both gross primary productivity (GPP) and net primary productivity (NPP) in units of g/m², without requiring chemical analysis or advanced instrumentation.
 
