@@ -1,11 +1,18 @@
-## Manual Input Parameters
-tension_ref = 3.55  # Reference tension (clear water) Example
-tension_measured = 1.55  # Measured tension (turbid water) Example
+# Manual Input Parameters
+tension_ref = 3.55       # Reference voltage (clear water) - example
+tension_measured = 1.55  # Measured voltage (turbid water) - example
+depth_lake = 10.0        # Maximum actual depth of the lake (in meters)
 
-jtu = (tension_ref - tension_measured) / 0.0165 #This calculation is valid for turbidity values between **0 and 125 JTU**.
+# Compute turbidity (JTU), attenuation coefficient (k), and theoretical photic depth (Zeu)
+jtu = (tension_ref - tension_measured) / 0.0165  # Valid for JTU between 0 and 125
 k = 0.05 + 0.02 * (jtu ** 0.5)
 zeu = 3 / k
 
-print("JTU =", round(jtu, 2))
-print("k =", round(k, 4))
-print("Zeu =", round(zeu, 2), "m")
+# Adjust Zeu if deeper than the actual lake depth
+zeu_effective = min(zeu, depth_lake)
+
+# Output
+print("Turbidity (JTU):", round(jtu, 2))
+print("Attenuation coefficient (k):", round(k, 4), "m⁻¹")
+print("Theoretical photic depth (Zeu):", round(zeu, 2), "m")
+print("Effective photic depth limited by lake depth:", round(zeu_effective, 2), "m")
