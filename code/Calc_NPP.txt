@@ -1,31 +1,31 @@
 import math
 
 # Parameters
-r_photo = 0.017 #efficiency of photsynthesis, here 1.7%
-r_auto = 0.3 
-d_algae = 1.0
-k = 0.6
-enthalpy = 17284  # J/g of cellulose
+r_photo = 0.017  # efficiency of photosynthesis
+r_auto = 0.3     # autotrophic respiration ratio
+d_algae = 1.0    # relative algal density
+k = 0.15       # light attenuation coefficient (m⁻¹)
+enthalpy = 17284 # J/g cellulose
+depth = 10       # actual lake depth in meters
 
-# Define irradiance function (W/m²) depending on time of day (t in hours)
+# Define irradiance function (bell-shaped over 24h)
 def I(t):
-    # Example: bell curve centered at noon (12h), amplitude 600 W/m²
-    return max(0, 600 * math.sin(math.pi * t / 12))
+    return max(0, 600 * math.sin(math.pi * (t - 6)/14))
 
-# Integrate irradiance over 24h (simple rectangle method, 1-hour steps)
-dt = 3600  # seconds in one hour
-irradiance_total = 0
-for hour in range(24):
-    irradiance_total += I(hour + 0.5) * dt  # mid-point rule
+# Integrate over 24h (mid-point rule)
+dt = 3600  # 1 hour in seconds
+irradiance_total = sum(I(h + 0.5) * dt for h in range(24))
 
-# Light attenuation and photic depth
+# Compute Zeu
 zeu = 3 / k
-light_integral = (1 - math.exp(-k * zeu)) / k
+effective_depth = min(zeu, depth)
 
-# Energy captured by photosynthesis (J/m²)
+# Integrate light up to effective depth
+light_integral = (1 - math.exp(-k * effective_depth)) / k
+
+# GPP and NPP
 gpp_energy = d_algae * irradiance_total * light_integral * r_photo
 gpp_mass = gpp_energy / enthalpy
 npp_mass = gpp_mass * (1 - r_auto)
 
-# Output
-print(f"NPP: {round(npp_mass, 2)} g/m²")
+print(f"NPP (depth-limited): {round(npp_mass, 2)} g/m²")
