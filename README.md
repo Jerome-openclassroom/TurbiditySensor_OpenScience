@@ -278,6 +278,9 @@ Over time, some lakes evolve into peatlands (ombrotrophic bogs or minerotrophic 
 
 ## 📁 Included Files
 
+### `/NOTES_READ_ME_FIRST`
+ `NOTES.txt` – IMPORTANT INFORMATION
+
 ### `/calibration`
 - `calibration_data.txt` – raw measurement values
 
