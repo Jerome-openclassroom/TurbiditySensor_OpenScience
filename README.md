@@ -210,7 +210,7 @@ R_auto is the proportion of biomass consumed by the producer’s own respiration
 
 ### 🧪 Example Calculation: Temperate Lake at Spring Equinox
 
-To provide a realistic example, we simulated a clear day at the spring equinox in a temperate zone (latitude ~45°N), where daylight lasts 12 hours. The irradiance profile was modeled using a sinusoidal function peaking at 600 W/m² at noon and zero at sunrise/sunset.
+To provide a realistic example, we first simulated a clear day at the spring equinox in a temperate zone (latitude ~45°N), where daylight lasts 12 hours. The irradiance profile was modeled using a sinusoidal function peaking at 600 W/m² at noon and zero at sunrise/sunset.
 
 We assumed the following parameters:
 - Mean daylight duration: **12 hours**
@@ -229,6 +229,8 @@ The simulated total irradiance over the day is numerically integrated (in W·s/m
 - **Net Primary Productivity (NPP):** ~18.04 g/m²/day
 
 This value is **consistent with typical observations** in eutrophic lakes or small productive ponds under good sunlight conditions.
+
+⚠️ These values represent upper-limit theoretical estimates under eutrophic conditions with optimal sunlight and minimal ecological loss. They are not representative of annual averages in natural mesotrophic lakes.
 
 This realistic scenario illustrates how optical turbidity data and basic irradiance modeling can yield biologically meaningful estimates of aquatic productivity, even without complex instruments or costly EXAO systems.
 
@@ -265,6 +267,8 @@ For a daily NPP of **20 g/m²** (dry cellulose equivalent):
 
 This method provides a **first-order estimation** suitable for low-cost sensors and educational or participatory science purposes. Further refinements may include pigment analysis, in-situ fluorometry, or nutrient limitation modeling.
 
+🔄 Update – Ecological Integration (June 2025)
+Following a deeper exploration of lake bioenergetics and in-situ data collection (AI_Assisted_Lake_Ecology), the Calc_NPP.py module was recently refined. A new empirical correction factor f_correction has been introduced to account for real-world ecological constraints (mortality, respiration, grazing). This improves the model’s alignment with observed Net Primary Production (NPP) values in mesotrophic systems, while preserving the low-cost, open science philosophy of the project.
 
 ### 🌀 Ecological Context
 
