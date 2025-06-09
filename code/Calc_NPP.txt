@@ -4,9 +4,9 @@ import math
 r_photo = 0.017  # efficiency of photosynthesis
 r_auto = 0.3     # autotrophic respiration ratio
 d_algae = 1.0    # relative algal density
-k = 0.15       # light attenuation coefficient (m⁻¹)
+k = 0.094       # light attenuation coefficient (m⁻¹)
 enthalpy = 17284 # J/g cellulose
-depth = 10       # actual lake depth in meters
+depth = 11.43      # actual lake depth in meters
 
 # Define irradiance function (bell-shaped over 24h)
 def I(t):
@@ -28,8 +28,23 @@ gpp_energy = d_algae * irradiance_total * light_integral * r_photo
 gpp_mass = gpp_energy / enthalpy
 npp_mass = gpp_mass * (1 - r_auto)
 
-print(f"NPP (depth-limited): {round(npp_mass, 2)} g/m²")
+print(f"Daily NPP (depth-limited) ideal and theoretical : {round(npp_mass, 2)} g/m²")
 
-f_correction = 0.75
-npp_yearly = npp_mass * f_correction
-print(f"NPP annual corrected, applying a f=1/350 empirical factor : {round(npp_yearly, 2)} g/m²/an") 
+# Empirical correction factor to convert the ideal, depth-limited, daily Net Primary Production (NPP)
+# into an ecologically realistic annual value.
+# This factor (f_correction = 1/300) accounts for cumulative ecosystem-level limitations such as:
+# - algal mortality and senescence,
+# - autotrophic and heterotrophic respiration,
+# - zooplankton grazing and trophic recycling,
+# - seasonal light fluctuations and nutrient constraints.
+# It effectively compresses the idealized productivity of a perfect summer day into a long-term average,
+# making the model output consistent with observed annual NPP in mesotrophic lake systems.
+
+
+f_correction = 1 / 300
+npp_yearly = npp_mass * 365 * f_correction
+npp_daily = npp_mass * f_correction
+
+print(f"Annual NPP corrected : {round(npp_yearly, 2)} g/m²/year")
+print(f"Daily NPP (depth-limited) corrected : {round(npp_daily, 2)} g/m²")
+
