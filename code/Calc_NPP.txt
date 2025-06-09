@@ -29,3 +29,7 @@ gpp_mass = gpp_energy / enthalpy
 npp_mass = gpp_mass * (1 - r_auto)
 
 print(f"NPP (depth-limited): {round(npp_mass, 2)} g/m²")
+
+f_correction = 0.75
+npp_yearly = npp_mass * f_correction
+print(f"NPP annual corrected, applying a f=1/350 empirical factor : {round(npp_yearly, 2)} g/m²/an") 
