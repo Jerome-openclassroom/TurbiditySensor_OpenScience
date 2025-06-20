@@ -22,6 +22,15 @@ To save on costly test kits:
 4️⃣ Measure each dilution with the Pierron device and record the raw light level or voltage.  
 5️⃣ Plot your calibration curve once: use it to read unknown samples in the future.
 
+## 📷 Example Images
+
+Below are sample calibration setups:
+
+![Nitrates Photometry](./nitrates_photometry.JPG)
+
+![Phosphates Photometry](./phosphates_photometry.JPG)
+
+
 ## ✅ 3️⃣ Good Practice
 
 - This method does not replace lab-grade spectrophotometry but provides robust semi-quantitative data for field, education, or citizen science.
