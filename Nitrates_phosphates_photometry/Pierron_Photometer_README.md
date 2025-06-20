@@ -14,7 +14,6 @@ For best measurement accuracy:
 
 ## 🧪 2️⃣ Prepare a Homemade Calibration Series
 
-To save on costly test kits:
 
 1️⃣ Buy a simple liquid garden fertilizer containing both nitrogen (N) and phosphorus (P).  
 2️⃣ Prepare a dilution series in demineralized water: e.g., 5 ppm, 10 ppm, 20 ppm, 50 ppm.  
