@@ -309,6 +309,11 @@ Over time, some lakes evolve into peatlands (ombrotrophic bogs or minerotrophic 
 - `colorimeter_1.jpg`
 - `colorimeter_2.jpg`
 
+### `/Nitrates_phosphates_photometry`
+- `nitrates_photometry.JPG`
+- `phosphates_photometry.JPG`
+- `Pierron_Photometer_README.md`
+
 ## 📚 References
 
 - Canadian Journal of Fisheries and Aquatic Sciences  
