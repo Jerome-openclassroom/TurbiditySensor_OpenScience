@@ -47,7 +47,7 @@ Below are sample calibration setups:
   
   ✅ Use a simple spreadsheet (Excel, OpenOffice Calc) to fit a linear or polynomial trendline and get the equation.  
   ✅ Use a short Python script (NumPy, SciPy, Matplotlib) for flexible fitting and plotting.  
-  ✅ Or simply ask a modern LLM (GPT, Grok, Mistral, Copilot) to generate the fitting code or directly interpret your JSON data!
+  ✅ Or simply ask a modern LLM (GPT, Grok, Mistral, Copilot) to generate the fitting code or directly interpret your data!
 
 **Tip:** Store your calibration results in this JSON or a simple CSV file for reuse and comparison.
 
