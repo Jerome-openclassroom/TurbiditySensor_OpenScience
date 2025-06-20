@@ -49,7 +49,7 @@ Below are sample calibration setups:
   ✅ Use a short Python script (NumPy, SciPy, Matplotlib) for flexible fitting and plotting.  
   ✅ Or simply ask a modern LLM (GPT, Grok, Mistral, Copilot) to generate the fitting code or directly interpret your data!
 
-**Tip:** Store your calibration results in this JSON or a simple CSV file for reuse and comparison.
+**Tip:** Store your calibration results in a JSON or a simple CSV file for reuse and comparison.
 
 
 ## 🔑 Key Insight
