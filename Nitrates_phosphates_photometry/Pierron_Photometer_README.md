@@ -6,7 +6,7 @@ This module explains how to reuse a basic Pierron colorimeter (originally design
 
 For best measurement accuracy:
 
-- **Phosphates:** The reaction produces a blue solution (molybdate blue complex). This means it strongly absorbs **red/orange light**. Therefore, use a **red or orange filter** to isolate this part of the spectrum.
+- **Phosphates:** The reaction produces a **blue solution** (molybdate blue complex). This means it strongly absorbs **red/orange light**. Therefore, use a **red or orange filter** to isolate this part of the spectrum.
   
 - **Nitrates:** The reaction typically produces a **pink solution** (Griess reaction). This means it strongly absorbs **green light**. Therefore, use a **green filter** to select this wavelength band.
   
