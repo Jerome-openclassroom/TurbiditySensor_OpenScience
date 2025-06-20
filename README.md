@@ -280,6 +280,10 @@ Over time, some lakes evolve into peatlands (ombrotrophic bogs or minerotrophic 
 
 ***********************
 
+**Bonus:** [How to use the Pierron colorimeter for more precise nitrate and phosphate monitoring](./Nitrates_phosphates_photometry/Pierron_Photometer_README.md) — Useful for detecting excess nutrients and preventing eutrophication, using Visocolor (Macherey-Nagel) type tests.
+
+***********************
+
 ## 📁 Included Files
 
 ### `/NOTES_READ_ME_FIRST`
