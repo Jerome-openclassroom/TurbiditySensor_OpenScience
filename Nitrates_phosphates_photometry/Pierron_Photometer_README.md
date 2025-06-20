@@ -8,8 +8,8 @@ For best measurement accuracy:
 
 - **Phosphates:** The reaction produces a blue solution (molybdate blue complex). This means it strongly absorbs **red/orange light**. Therefore, use a **red or orange filter** to isolate this part of the spectrum.
   
-- **Nitrates:** The reaction produces a yellow solution. This means it strongly absorbs **blue/violet light**. Therefore, use a **blue or violet filter**.
-
+- **Nitrates:** The reaction typically produces a **pink solution** (Griess reaction). This means it strongly absorbs **green light**. Therefore, use a **green filter** to select this wavelength band.
+  
 ✅ A simple piece of theater gel filter or colored plastic sheet is sufficient. This avoids expensive laboratory filters.
 
 ## 🧪 2️⃣ Prepare a Homemade Calibration Series
