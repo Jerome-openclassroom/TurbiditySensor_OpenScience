@@ -41,7 +41,16 @@ Below are sample calibration setups:
 
 ## 🗂️ Files & Calibration
 
-- [Calibration data example](./calibration_data.json) — Example JSON structure for saving dilution points and voltages.
+- **How to calibrate:**
+  
+  Once you record your raw signal or voltage for each dilution point, you can build your calibration curve in several ways:
+  
+  ✅ Use a simple spreadsheet (Excel, OpenOffice Calc) to fit a linear or polynomial trendline and get the equation.  
+  ✅ Use a short Python script (NumPy, SciPy, Matplotlib) for flexible fitting and plotting.  
+  ✅ Or simply ask a modern LLM (GPT, Grok, Mistral, Copilot) to generate the fitting code or directly interpret your JSON data!
+
+**Tip:** Store your calibration results in this JSON or a simple CSV file for reuse and comparison.
+
 
 ## 🔑 Key Insight
 
